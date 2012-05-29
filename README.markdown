@@ -48,6 +48,7 @@ You'll notice the inelegant way that the route is being constructed.  js:routes 
         }
     });
 
+Paths can take an optional format parameter like: Paths.note({id: post_id, format: 'json'})
 # Hangups #
 
 * The generated routes don't have anything to do with the associated HTTP Verb.  You need to specify that yourself, as usual, and as demonstrated in the example above.
