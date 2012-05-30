@@ -26,7 +26,7 @@ end
 def generate_method(name, path)
   compare = /:(.*?)(\/|$)/
   path.sub!(compare, "' + params.#{$1} + '#{$2}") while path =~ compare
-  return "\t#{name}: function(params) {return '#{path}';}"
+  return "  #{name}: function(params) {return '#{path}' + (params && params.format ? '.'+params.format : '');}"
 end
 
 def generate_routes
